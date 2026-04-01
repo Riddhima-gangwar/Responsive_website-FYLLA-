@@ -78,8 +78,33 @@ main{
 }
 .line{
     background-color: black;
-    height: 1px;
+    height: 0.5px;
 }
+    .bottom{
+        display:flex;
+        flex-direction:column; 
+        gap:1.5rem;
+
+        .elem{
+            display:flex;
+            flex-direction: column;
+            gap:1rem;
+
+            svg{
+            width:4rem;
+            aspect-ratio: 1 / 1;
+            }  
+            h1{
+                font-size:2.5rem;
+                font-weight: 400;
+            } 
+            p{
+                @include light-weight-font;
+            }
+
+        }
+    }
+
 }
 
 @media(min-width:1020px){
@@ -89,5 +114,29 @@ main{
     .view-1{
         // font-size:7rem
         width: 100%;
+    }
+    .view-2{
+        flex-direction: row;
+        .top{
+            justify-content: space-between ;
+            width: 60%;
+            h1{
+                font-size: 4rem;
+                margin-bottom: 20px;
+            }
+        }
+        .line{
+            height: initial;
+            width: 1px;
+        }
+        .bottom{
+           width: 40%;
+            .line{
+                height: 1px;
+                width:100%;
+                align-self: stretch;
+            }
+        }
+
     }
 }
