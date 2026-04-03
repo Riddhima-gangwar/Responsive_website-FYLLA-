@@ -103,6 +103,34 @@ main {
   opacity: 0.8;
 }
 
+.view-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+.view-3 .line {
+  background-color: black;
+  height: 0.5px;
+}
+.view-3 p {
+  font-weight: 200;
+  opacity: 0.8;
+}
+.view-3 h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  width: 80%;
+}
+.view-3 h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.view-4 {
+  height: 100vh;
+}
+
 @media (min-width: 1020px) {
   main {
     padding: 2rem;
@@ -131,7 +159,39 @@ main {
   .view-2 .bottom .line {
     height: 1px;
     width: 100%;
-    align-self: stretch;
+  }
+  .view-3 {
+    flex-direction: row;
+    margin: 2rem 0;
+  }
+  .view-3 .line {
+    height: initial;
+    width: 1px;
+  }
+  .view-3 .left {
+    width: 40%;
+  }
+  .view-3 .left h1 {
+    font-size: 4rem;
+    font-weight: 400;
+  }
+  .view-3 .left p {
+    font-weight: 200;
+    opacity: 0.8;
+    font-size: 1.5rem;
+  }
+  .view-3 .left .elem {
+    position: sticky;
+    top: 0;
+  }
+  .view-3 .right {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+  .view-4 {
+    padding-top: 20rem;
   }
 }
 
